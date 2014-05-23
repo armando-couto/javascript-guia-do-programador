@@ -5,8 +5,40 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Livro JavaScript do Maujor</title>
 	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	Carro = {
+		marca: "Renault",
+		modelo: "Logan",
+		ipva: "valor('rb15')",
+		dimensoes: {
+			c: "4.250mm",
+			l: "1.735mm",
+			h: "1.525mm"
+		}
+	}
+
+	marca = Carro.marca;
+	modelo = Carro.modelo;
+	comprimeto = Carro.dimensoes.c;
+
+	executar = function() {
+		alert(marca);
+		alert(modelo);
+		alert(comprimeto);
+	}
+
+	</script>
 </head>
 <body>
-	
+	<div id="tudo">
+		<h1>Capítulo 1</h1>
+		<p class="xpto" id="teste">Literais objetos.</p>
+		<p class="nav-arq" id="referencia">Arquivos exemplo:
+		<a href="c1-caracteres.html" >&laquo; anterior </a> | 
+		<a href="c1-#.html" >&raquo; próximo </a></p>
+		<button type="button" onclick="executar()">Mostrar propriedades</button>
+	</div>
 </body>
 </html>
