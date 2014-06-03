@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>E-mail validator</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	var padrao = /^([\w-]+(\.[\w-]+)*)@(( [\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(\.[a-z]{2})?)$/i;
+
+	function validaEmail () {
+		var email = document.forms[0].elements[0].value;
+
+		if(padrao.test(email)) {
+			alert("Parabéns! E-mail válido!");
+		} else {
+			alert("E-mail inválido! Tente outra vez.")
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<form action="" method="get">
+		<label>E-mail: <input type="text" size="80"/></label>
+		<button type="button" onclick="validaEmail()">Validar</button>
+	</form>
+</body>
+</html>

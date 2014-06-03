@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>charCodeAt</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	function scharCodeAt () {
+		
+		var texto = 'mau%\SR=+t$@ 098mu hjor \\\a';
+		var indice = Number(document.form.indice.value);
+
+		if (isFinite(indice) && indice >= 0 && indice <= texto.length-1) {
+			document.form.resultado.value = texto.charCodeAt(indice);
+		} else {
+			alert('Entre um indice válido');
+		}
+	}
+	</script>
+</head>
+<body>
+	
+	<p>String: <br/> <b>mau%\SR=+t$@ 098mu hjor \\\a</b></p>
+
+	<form name="form" action="" method="get">
+		<label> Indice: <input type="text" name="indice" size="4" maxlength="4" /></label>
+		<button type="button" onclick="scharCodeAt()">string.charCodeAt()</button>
+		<input type="text" name="resultado" size="4" maxlength="4" class="dest" />
+	</form>
+</body>
+</html>

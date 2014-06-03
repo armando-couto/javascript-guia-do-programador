@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CPF mask</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	var padrao = /^([\d]{3})([\d]{3})([\d]{3})([\d]{2})$/;
+
+	function mascaraCPF () {
+		var cpf = document.forms[0].elements[0].value;
+
+		if(!padrao.test(cpf)) {
+			alert("Entre os 11 número do CPF\nsem pontos e traço");
+		} else {
+			document.forms[0].elements[0].value = cpf.replace(padrao, '$1.$2.$3-$4');
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<form action="" method="get">
+		<label>CPF: <input type="text" onblur="mascaraCPF()" /></label>16.
+	</form>
+</body>
+</html>

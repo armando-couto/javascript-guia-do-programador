@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" />
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+	var s = 'javascript';
+	function metodoHTML(metodo, arg) {
+		var marcacao = document.getElementById('marcacao');
+		
+		switch (metodo) {
+			case 'ancora':
+			document.form.resultado.value = s.anchor(arg);
+			marcacao.innerHTML = s.anchor(arg);
+			break;
+		
+			case 'big':
+			document.form.resultado.value = s.big();
+			marcacao.innerHTML = s.big();
+			break;
+		
+			case 'bold':
+			document.form.resultado.value = s.bold();
+			marcacao.innerHTML = s.bold();
+			break;
+		
+			case 'fixed':
+			document.form.resultado.value = s.fixed();
+			marcacao.innerHTML = s.fixed();
+			break;
+		
+			case 'fontcolor':
+			document.form.resultado.value = s.fontcolor(arg);
+			marcacao.innerHTML = s.fontcolor(arg);
+			break;
+			
+			case 'fontsize':
+			document.form.resultado.value = s.fontsize(7);
+			marcacao.innerHTML = s.fontsize(7);
+			break;
+
+			case 'italics':
+			document.form.resultado.value = s.italics();
+			marcacao.innerHTML = s.italics();
+			break;
+
+			case 'link':
+			document.form.resultado.value = s.link(arg);
+			marcacao.innerHTML = s.link(arg);
+			break;
+
+			case 'small':
+			document.form.resultado.value = s.small();
+			marcacao.innerHTML = s.small();
+			break;
+
+			case 'strike':
+			document.form.resultado.value = s.strike();
+			marcacao.innerHTML = s.strike();
+			break;
+
+			case 'sub':
+			document.form.resultado.value = s.sub();
+			marcacao.innerHTML = s.sub();
+			break;
+
+			case 'sup':
+			document.form.resultado.value = s.sup();
+			marcacao.innerHTML = s.sup();
+			break;
+		};
+	}
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 7</h1>
+<h2>String <code>Métodos HTML</code><br />
+<small>Atenção: Estes métodos não constam das ECMA-262 e seu uso deve ser evitado.</small></h2>
+
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type="text/javascript">
+	var s = 'javascript';
+	function metodoHTML(metodo, arg) {
+		var marcacao = document.getElementById('marcacao');
+		
+		switch (metodo) {
+			case 'ancora':
+			document.form.resultado.value = s.anchor(arg);
+			marcacao.innerHTML = s.anchor(arg);
+			break;
+		
+			case 'big':
+			document.form.resultado.value = s.big();
+			marcacao.innerHTML = s.big();
+			break;
+		
+			case 'bold':
+			document.form.resultado.value = s.bold();
+			marcacao.innerHTML = s.bold();
+			break;
+		
+			case 'fixed':
+			document.form.resultado.value = s.fixed();
+			marcacao.innerHTML = s.fixed();
+			break;
+		
+			case 'fontcolor':
+			document.form.resultado.value = s.fontcolor(arg);
+			marcacao.innerHTML = s.fontcolor(arg);
+			break;
+			
+			case 'fontsize':
+			document.form.resultado.value = s.fontsize(7);
+			marcacao.innerHTML = s.fontsize(7);
+			break;
+
+			case 'italics':
+			document.form.resultado.value = s.italics();
+			marcacao.innerHTML = s.italics();
+			break;
+
+			case 'link':
+			document.form.resultado.value = s.link(arg);
+			marcacao.innerHTML = s.link(arg);
+			break;
+
+			case 'small':
+			document.form.resultado.value = s.small();
+			marcacao.innerHTML = s.small();
+			break;
+
+			case 'strike':
+			document.form.resultado.value = s.strike();
+			marcacao.innerHTML = s.strike();
+			break;
+
+			case 'sub':
+			document.form.resultado.value = s.sub();
+			marcacao.innerHTML = s.sub();
+			break;
+
+			case 'sup':
+			document.form.resultado.value = s.sup();
+			marcacao.innerHTML = s.sup();
+			break;
+		};
+	}&lt;script>
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+<p>string: <b> javascript</b></p>
+&lt;form name="form" action="" method="get">
+&lt;button type="button" onclick="metodoHTML('ancora', 'js')">anchor("js")&lt;/button> 
+&lt;button type="button" onclick="metodoHTML('big')">big()&lt;/button> 
+&lt;button type="button" onclick="metodoHTML('bold')">bold()&lt;/button> 
+&lt;button type="button" onclick="metodoHTML('fixed')">fixed()&lt;/button> 
+
+&lt;button type="button" onclick="metodoHTML('fontcolor', '#ff0000')">fontcolor()&lt;/button> 
+&lt;button type="button" onclick="metodoHTML('fontsize', 7)">fontsize()&lt;/button> 
+&lt;button type="button" onclick="metodoHTML('italics')">fixed)&lt;/button> 
+&lt;button type="button" onclick="metodoHTML('link', 'http://www.maujor.com')">fixed)&lt;/button> 
+&lt;button type="button" onclick="metodoHTML('small')">small()&lt;/button> 
+&lt;button type="button" onclick="metodoHTML('strike')">strike()&lt;/button> 
+&lt;button type="button" onclick="metodoHTML('sub')">sub()&lt;/button> 
+&lt;button type="button" onclick="metodoHTML('sup')">sup()&lt;/button> 
+&lt;br />&lt;br />
+&lt;p>&lt;label for="r">Marcação HTML gerada: &lt;/label>
+&lt;input type="text" name="resultado" id="r" size="45" />&lt;/p>
+&lt;/form> 
+&lt;p>Renderização da marcação gerada: &lt;span id="marcacao">&lt;/span>&lt;/p>
+</pre>
+
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="c7-substring.html">&laquo; anterior</a> | <a href="../cap_08/c8-mathrandom.html">capítulo 8 &raquo;</a></p>
+
+<p>string: <b> javascript</b></p>
+<form name="form" action="" method="get">
+<button type="button" onclick="metodoHTML('ancora', 'js')">anchor("js")</button> 
+<button type="button" onclick="metodoHTML('big')">big()</button> 
+<button type="button" onclick="metodoHTML('bold')">bold()</button> 
+<button type="button" onclick="metodoHTML('fixed')">fixed()</button> 
+
+<button type="button" onclick="metodoHTML('fontcolor', '#ff0000')">fontcolor()</button> 
+<button type="button" onclick="metodoHTML('fontsize', 7)">fontsize()</button> 
+<button type="button" onclick="metodoHTML('italics')">italics()</button> 
+<button type="button" onclick="metodoHTML('link', 'http://www.maujor.com')">link()</button> 
+<button type="button" onclick="metodoHTML('small')">small()</button> 
+<button type="button" onclick="metodoHTML('strike')">strike()</button> 
+<button type="button" onclick="metodoHTML('sub')">sub()</button> 
+<button type="button" onclick="metodoHTML('sup')">sup()</button> 
+<br /><br />
+<p><label for="r">Marcação HTML gerada: </label>
+<input type="text" name="resultado" id="r" size="45" /></p>
+</form> 
+<p>Renderização da marcação gerada: <span id="marcacao"></span></p>
+</div>
+</body>
+</html>

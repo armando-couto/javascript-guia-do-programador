@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>É Finito</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	function ehFinito (x) {
+		eval('var bool = isFinite(x); alert(bool)');
+	}
+	
+	</script>
+</head>
+<body>
+	<button type="button" onclick="ehFinito(1.56)">isFinite(1.56)</button>
+	<button type="button" onclick="ehFinito(-3/5)">isFinite(-3/5)</button>
+	<button type="button" onclick="ehFinito('maujor')">isFinite('maujor')</button>
+	<button type="button" onclick="ehFinito('20/04/2010')">isFinite('20/04/2010')</button>
+	<button type="button" onclick="ehFinito(0)">isFinite(0)</button>
+	<button type="button" onclick="ehFinito(+3/0)">isFinite(+∞)</button>
+	<button type="button" onclick="ehFinito(-5/0)">isFinite(-∞)</button>
+</body>
+</html>

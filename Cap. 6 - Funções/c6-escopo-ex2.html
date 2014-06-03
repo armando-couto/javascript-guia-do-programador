@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Escopo Exemplo 2</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	function testeEscopo () {
+		 soma = 2 + 6;
+		alert("A soma é: " + soma); // resulta em 8
+	}
+
+	testeEscopo();
+
+	try{
+		alert("O dobro da soma é: " + 2 * soma);  // resulta em 16
+	} catch(e) {
+		alert(e.message); // Não há mensagem de erro
+	}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

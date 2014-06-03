@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>É Finito</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	function numero (x) {
+		eval('var num = Number(x); alert(num)');
+	}
+	
+	</script>
+</head>
+<body>
+	<button type="button" onclick="numero(1.56)">Number(1.56)</button>
+	<button type="button" onclick="numero(-3/5)">Number(-3/5)</button>
+	<button type="button" onclick="numero('maujor')">Number('maujor')</button>
+	<button type="button" onclick="numero('20/04/2010')">Number('20/04/2010')</button>
+	<button type="button" onclick="numero(0)">Number(0)</button>
+	<button type="button" onclick="numero(+3/0)">Number(+∞)</button>
+	<button type="button" onclick="numero(-5/0)">Number(-∞)</button>
+</body>
+</html>

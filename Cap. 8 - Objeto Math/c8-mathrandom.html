@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Math Random</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	function numeroAleatorio (a, b) {
+		var ntotal = b - a + 1;
+		var resultado = Math.floor(Math.random() * ntotal + a);
+		alert("Numero gerado: " + resultado);
+	}
+
+
+	</script>
+</head>
+<body>
+	
+	<button type="button" onclick="numeroAleatorio(2, 12)">Gerar aleatório [2-12]</button>
+	<button type="button" onclick="numeroAleatorio(15, 55)">Gerar aleatório [15-55]</button>
+	<button type="button" onclick="numeroAleatorio(10, 100)">Gerar aleatório [10-100]</button>
+	<button type="button" onclick="numeroAleatorio(0, 10)">Gerar aleatório [0-10]</button>
+</body>
+</html>

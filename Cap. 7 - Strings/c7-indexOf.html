@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>indexOf</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	function sindexOf () {
+		var texto = 'Javascript é uma linguagem muito legal.'
+		var s = document.form.s.value;
+		var i = Number(document.form.i.value);
+
+		if(isFinite(i) && i >= 0 && i <= s.length-1) {
+			document.form.resultado.value = texto.indexOf(s, i);
+		} else {
+			alert('Entre um índice válido para início.')
+		}
+	}
+	</script>
+</head>
+<body>
+	
+	<p>String com 38 caracteres: <br/> <b>JavaScript é uma linguagem muito legal.</b></p>
+	<form name="form" action="" method="get">
+		<label>indexOf: <input type="text" name="s"size="6" placeholder="Digite..."></label>
+		<label>inicio <input type="text" name="i" size="4" value="0"></label>
+		<button type="button" onclick="sindexOf()">indexOf()</button>
+		<input type="text" name="resultado" size="4" maxlength="4" class="dest">
+	</form>
+
+</body>
+</html>

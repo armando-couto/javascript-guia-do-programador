@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" />
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+var s = 'JavaScript é uma linguagem legal';
+function ssubstring(indiceA, indiceB) {
+	var indiceA = document.form.indicea.value;
+	var indiceB = document.form.indiceb.value;
+	var resultado =  s.substring(indiceA, indiceB);
+		document.form.resultado.value = resultado;
+}
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 7</h1>
+<h2>String <code>substring()</code></h2>
+
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+var s = 'JavaScript é uma linguagem legal';
+function ssubstring(indiceA, indiceB) {
+	var indiceA = document.form.indicea.value;
+	var indiceB = document.form.indiceb.value;
+	var resultado =  s.substring(indiceA, indiceB);
+		document.form.resultado.value = resultado;
+}
+&lt;script>
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+&lt;form name="form" action="" method="get">
+&lt;label>inicio: &lt;input type="text" name="indicea" size="3" maxlength="3" />&lt;/label>
+&lt;label>fim: &lt;input type="text" name="indiceb" size="3" maxlength="3" />&lt;/label> 
+&lt;button type="button" onclick="ssubstring()">string.substring()&lt;/button>&lt;br />&lt;br /> 
+&lt;input type="text" name="resultado" class="dest bold" size="40" />
+&lt;/form> 
+</pre>
+
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="c7-substr.html">&laquo; anterior</a> | <a href="c7-metodoshtml.html">próximo &raquo;</a></p>
+
+<p>string: <b>"JavaScript é uma linguagem legal"</b> (32 caracteres)</p>
+
+<form name="form" action="" method="get">
+<label>inicio: <input type="text" name="indicea" size="3" maxlength="3" /></label>
+<label>fim: <input type="text" name="indiceb" size="3" maxlength="3" /></label> 
+<button type="button" onclick="ssubstring()">string.substring()</button><br /><br /> 
+<input type="text" name="resultado" class="dest bold" size="40" />
+</form> 
+</div>
+</body>
+</html>
