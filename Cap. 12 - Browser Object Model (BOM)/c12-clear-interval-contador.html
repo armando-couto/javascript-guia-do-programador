@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Clear Interval - Contador</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	var i = 0;
+	var contador = null;
+	var contando = false;
+
+	function contar () {
+		i++;
+		document.forms[0].elements[0].value = i;
+	}
+
+	function iniciarContador () {
+		if(!contando) {
+			contando = true;
+			contador = setInterval(contar, 1000);
+		}
+	}
+
+	function pararContador () {
+		clearInterval(contador);
+		i = 0;
+		contando = false;
+	}
+
+	</script>
+</head>
+<body>
+	<form action="" method="get">
+		<input type="text" size="2" style="font-size: 40px; color: #f00; font-weight: bold; text-align: center;" />
+		<button type="button" onclick="iniciarContador()">Iniciar contador</button>
+		<button type="button" onclick="pararContador()">Parar contador</button>
+	</form>
+</body>
+</html>

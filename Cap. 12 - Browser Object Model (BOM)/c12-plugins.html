@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" />
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 12</h1>
+<h2>Propriedades - <code>plugins</code></h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type="text/javascript">
+if (navigator.plugins) {
+    for (var i=0; i < navigator.plugins.length; i++){
+	document.write("&lt;h2>Plugin: " + i + "&lt;/h2>");
+	document.write("Nome do plugin: " + navigator.plugins[i].name + "<br />");
+    document.write("Descrição do plugin: " + navigator.plugins[i].description + "<br />");
+    document.write("Nome de arquivo do plugin: " + navigator.plugins[i].filename + "<br />");
+    document.write("Tipos de MIME manipulados pelo plugin: " + navigator.plugins[i].length + "<br />");
+	} 
+} 
+&lt;script>
+</pre>
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="c12-mimetypes.html">&laquo; anterior</a> | <a href="c12-plugins-ie.html">próximo &raquo;</a></p>
+<script type="text/javascript">
+if (navigator.plugins) {
+    for (var i=0; i < navigator.plugins.length; i++){
+	document.write("<h2>Plugin: " + i + "</h2>");
+	document.write("Nome do plugin: " + navigator.plugins[i].name + "<br />");
+    document.write("Descrição do plugin: " + navigator.plugins[i].description + "<br />");
+    document.write("Nome de arquivo do plugin: " + navigator.plugins[i].filename + "<br />");
+    document.write("Tipos de MIME manipulados pelo plugin: " + navigator.plugins[i].length + "<br />");
+	} 
+} 
+</script>
+</div>
+</body>
+</html>

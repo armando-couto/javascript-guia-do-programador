@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" />
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+	function abreJanela(url,nome,funcionalidades,booleano) {
+		window.open(url,nome,funcionalidades,booleano);
+	}
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 12</h1>
+<h2>Métodos - <code>open()</code></h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type="text/javascript">
+	function abreJanela(url,nome,funcionalidades,booleano) {
+		window.open(url,nome,funcionalidades,booleano);
+	}
+&lt;script>
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+...
+&lt;button onclick="abreJanela('','','width=800,height=300')">Abre janela1&lt;/button>
+&lt;button onclick="abreJanela('http://google.com.br','','width=800,height=300,location=no')">Abre janela2&lt;/button>
+&lt;button onclick="abreJanela('http://google.com.br','minha_janela','width=800,height=300,left=50,top=50')">Abre janela3&lt;/button>
+&lt;button onclick="abreJanela('http://google.com.br','_blank','width=200,height=300,left=250,top=250')">Abre janela4&lt;/button>
+&lt;button onclick="abreJanela('http://google.com.br','','width=300,height=500,resizable=1,title=no')">Abre janela5&lt;/button>
+...
+</pre>
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="c12-color-depth.html">&laquo; anterior</a> | <a href="c12-close.html">próximo &raquo;</a></p>
+<button onclick="abreJanela('','','width=800,height=300')">Abre janela1</button>
+<button onclick="abreJanela('http://google.com.br','','width=800,height=300,location=no')">Abre janela2</button>
+<button onclick="abreJanela('http://google.com.br','minha_janela','width=800,height=300,left=50,top=50')">Abre janela3</button>
+<button onclick="abreJanela('http://google.com.br','_blank','width=200,height=300,left=250,top=250')">Abre janela4</button>
+<button onclick="abreJanela('http://google.com.br','','width=300,height=500,resizable=1,title=no')">Abre janela5</button>
+
+</div>
+</body>
+</html>

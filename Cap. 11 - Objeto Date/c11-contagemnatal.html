@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Contagem Natal</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	var agora, anoCorrente, diaNatal, diferenca, UM_DIA, diasFaltando;
+	agora = new Date();
+	anoCorrente = agora.getFullYear();
+	diaNatal = new Date(anoCorrente, 11, 25);
+	diferenca = diaNatal.getTime() - agora.getTime();
+	UM_DIA = 24 * 60 * 60 * 1000;
+
+	window.onload = function () {
+		if(diferenca > 0) {
+			diasFaltando = Math.ceil(diferenca / UM_DIA);
+			document.forms[0].elements[0].value = "Faltam " + diasFaltando + " dias para o Natal";
+		} else if (diferenca < 0 && diferenca > -UM_DIA) {
+			document.forms[0].elements[0].value = "Feliz Natal!";
+		} else {
+			diaNatal = new Date(anoCorrente + 1, 11, 25);
+			diferenca = diaNatal.getTime() - agora.getTime();
+			diasFaltando = Math.ceil(diferenca / UM_DIA);
+			document.forms[0].elements[0].value = "Faltam " + diasFaltando + " dias para o Natal";
+		}
+	}
+	</script>
+</head>
+<body>
+	<form action="" method="get">
+		<input type="text" size="40">
+	</form>
+</body>
+</html>

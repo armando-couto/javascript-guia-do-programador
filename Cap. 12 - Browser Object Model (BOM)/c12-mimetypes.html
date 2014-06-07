@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" />
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 12</h1>
+<h2>Navigator - <code>mimeTypes</code></h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type="text/javascript">
+	document.write('&lt;ul>')
+	document.write('&lt;li>Mime-types description: '+ navigator.mimeTypes["application/x-shockwave-flash"].description + '&lt;/li>')
+	document.write('&lt;li>Mime-types type: '+ navigator.mimeTypes["application/x-shockwave-flash"].type + '&lt;/li>')		
+	document.write('&lt;li>Mime-types plugin nome: '+ navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin.name + '&lt;/li>')		
+	document.write('&lt;li>Mime-types plugin versão: '+ navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin.version + '&lt;/li>')		
+	document.write('&lt;li>Mime-types suffixes: '+ navigator.mimeTypes["application/x-shockwave-flash"].suffixes + '&lt;/li>')		
+	document.write('&lt;/ul>')
+&lt;script>
+</pre>
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="c12-navigator.html">&laquo; anterior</a> | <a href="c12-plugins.html">próximo &raquo;</a></p>
+<script type="text/javascript">
+	document.write('<ul>')
+	document.write('<li>Mime-types description: '+ navigator.mimeTypes["application/x-shockwave-flash"].description + '</li>')
+	document.write('<li>Mime-types type: '+ navigator.mimeTypes["application/x-shockwave-flash"].type + '</li>')		
+	document.write('<li>Mime-types plugin nome: '+ navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin.name + '</li>')		
+	document.write('<li>Mime-types plugin versão: '+ navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin.version + '</li>')		
+	document.write('<li>Mime-types suffixes: '+ navigator.mimeTypes["application/x-shockwave-flash"].suffixes + '</li>')		
+	document.write('</ul>')
+</script>
+
+</div>
+</body>
+</html>

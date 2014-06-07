@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Focus</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">	
+
+	function abreJanelaSemFocus () {
+		window.open("", "", width=200, height=200);
+	}
+
+	function abreJanelaComFocus () {
+		window.open("", "", width=200, height=200);
+		window.focus();
+	}
+
+	</script>	
+</head>
+<body>
+	<button type="button" onclick="abreJanelaSemFocus()">Abre janela sem dar foco</button>
+	<button type="button" onclick="abreJanelaComFocus()">Abre janela dando foco</button>
+</body>
+</html>
