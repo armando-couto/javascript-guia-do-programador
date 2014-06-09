@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Inner HTML</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	window.onload = function () {
+		var elTitulo = document.getElementById("tit");
+		var elParUm = document.getElementsByTagName("p") [0];
+		var elMensagem = document.getElementById("msg");
+		var elBotao = document.getElementById("btn");
+		var htmlTit = elTitulo.innerHTML;
+
+		elBotao.onclick = function () {
+			elParUm.innerHTML="Mudei o texto desse parágrafo";
+			elParUm.style.background = "yellow";
+			elMensagem.innerHTML = "<h2>Título inserido com <code>innerHTML</code></h2>";
+			elMensagem.innerHTML += "<h2>" + htmlTit + "</h2>";
+			elMensagem.innerHTML += "<p>Recarregue a página para repetir</p>";
+			elMensagem.style.color = "red";
+		}
+	}
+	</script>
+</head>
+<body>
+	<h2 id="tit">Titulo nivel dois</h2>
+	<p>Texto do primeiro parágrafo</p>
+	<p>Texto do segundo parágrado</p>
+	<div id="msg"></div>
+
+	<button type="button" id="btn">Rodar script</button>
+</body>
+</html>

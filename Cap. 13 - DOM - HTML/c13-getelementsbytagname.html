@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>GetElementsByTagName</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	window.onload = function () {
+		var titulosNivelDois = document.getElementsByTagName("h2");
+		titulosNivelDois[1].style.backgroundColor = "#ffff00";
+		titulosNivelDois[2].style.color="#ff0000";
+		titulosNivelDois[3].style.fontSize="50px";
+	}
+	</script>
+</head>
+<body>
+	<h2>Método <code>getElementsByTagName()</code></h2>
+	
+	<h2>Introdução</h2>	
+		<p>Texto do parágrafo</p>
+	<h2 id="def">Definição</h2>
+		<p>Texto do parágrafo</p>
+	<h2 id="tipo">Tipos de DOM</h2>
+	<ul>
+		<li>DOM para HTML</li>
+		<li>DOM para XML</li>
+	</ul>
+
+</body>
+</html>
