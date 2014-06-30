@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Error</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	window.onload = function () {
+		var um = document.getElementsByTagName("p")[0];
+		var dois = document.getElementsByTagName("p")[1];
+		var tres = document.getElementsByTagName("p")[2];
+	}
+
+	try {
+		um.insertBefore(dois,tres);
+	} catch(e) {
+		alert(e.code);
+	}
+	</script>
+</head>
+<body>
+	<h2>Título nível 2</h2>
+	<p>Primeiro parágrafo</p>
+	<p>Segundo parágrafo</p>
+	<p>Terceiro parágrafo</p>
+</body>
+</html>

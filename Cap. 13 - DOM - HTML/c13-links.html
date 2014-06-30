@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Links</title>
+	<link rel="stylesheet" href="estilo.css" type="text/css" media="all">
+
+	<script type="text/javascript">
+
+	window.onload = function  () {
+		var el, msg, mensagem, elBotao;
+		el = document.getElementsByTagName("link");
+		msg = document.getElementById("msg");
+		elBotao = document.getElementById("btn");
+
+		mensagem = "<h3> Atributos do  primeiro elemento <code> link</code> do documento</h3>";
+		mensagem += "<ul>";
+		mensagem += "<li>href= " + el[0].href + "</li>";
+		mensagem += "<li>rel= " + el[0].rel + "</li>";
+		mensagem += "<li>type= " + el[0].type + "</li>";
+		mensagem += "<li>media= " + el[0].media + "</li>";
+		mensagem += "</ul>";
+
+		elBotao.onclick = function () {
+			msg.innerHTML = mensagem;
+			el[0].disable = true;
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="msg"></div>
+	<button type="button" id="btn">Rodar Script</button>
+</body>
+</html>

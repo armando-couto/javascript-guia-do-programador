@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Document Ex 1</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	window.onload = function () {
+		var el, container, texto, para, resultado;
+		elBotao = document.getElementById("btn");
+		container = document.getElementById("container");
+		texto = document.createTextNode("Texto criado com o método createTextNode()");
+		para = document.createElement("p");
+		resultado = para.appendChild(texto);
+
+		elBotao.onclick = function () {
+			container.appendChild(resultado);
+		}
+	}
+	</script>
+</head>
+<body>
+	
+	<div id="container"></div>
+	<button type="button" id="btn">Rodar Script</button>
+</body>
+</html>

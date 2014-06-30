@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Coleção HTML</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	window.onload = function () {
+		var msg;
+		var para = document.getElementsByTagName("p");
+		var resultado = document.getElementById("resultado");
+
+		msg = '<ul>';
+		msg += '<li>Quantidade de parágrafos: ' + para.length + "</li>";
+		msg += '<li>Texto do 2o. parágrafo: ' + para.item(1).innerHTML + '</li>';
+		msg += '<li>Texto parágrafo com id="xpto": ' + para.namedItem("xpto").innerHTML + '</li>';
+		msg += '</ul>';
+		resultado.innerHTML = msg;
+
+//		alert(document.title);
+		//alert(document.URL);
+	}
+	</script>
+</head>
+<body>
+	<p>Esse é o primeiro parágrafo</p>
+	<p>Esse é o segundo parágrafo</p>
+	<p id="xpto">Esse é o terceiro parágrafo</p>
+	<p>Esse é o quarto parágrafo</p>
+
+	<div id="resultado"></div>
+</body>
+</html>
