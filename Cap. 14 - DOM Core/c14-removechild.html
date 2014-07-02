@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head> 
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" media="all">
+.xpto {
+	width:100%;
+	height:20px;
+	background:#ff0;
+	}
+</style>
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+// <![CDATA[
+window.onload = function () {
+var botaoRemover,  para, negrito;	
+	botaoRemover = document.getElementById("btn");	
+	para = document.getElementsByTagName("p")[0];
+	negrito = document.getElementsByTagName("b")[0];
+	
+	botaoRemover.onclick = function() {
+		para.removeChild(negrito);
+	}
+}
+// ]]>
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 14</h1>
+<h2>DOM Core <code>removeChild</code></h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type=&quot;text/javascript&quot;&gt;
+window.onload = function () {
+var botaoRemover,  para, negrito;	
+	botaoRemover = document.getElementById("btn");	
+	para = document.getElementsByTagName("p")[0];
+	negrito = document.getElementsByTagName("b")[0];
+	
+	botaoRemover.onclick = function() {
+		para.removeChild(negrito);
+	}
+}
+&lt;script&gt;
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+...
+&lt;p class="xpto">Texto do parágrafo com &lt;b>palavra&lt;/b> em negrito.&lt;/p>
+&lt;button type="button" id="btn">Remover B&lt;/button>
+...
+</pre>	
+
+<hr />
+
+<p class="xpto">Texto do parágrafo com <b>palavra</b> em negrito.</p>
+<button type="button" id="btn">Remover B</button>
+
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="c14-clonenode.html">&laquo; anterior</a> | <a href="c14-replacechild.html">próximo &raquo;</a></p>
+</div>
+</body>
+</html>

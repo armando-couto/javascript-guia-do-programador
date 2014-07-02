@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head> 
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" media="all">
+h3 {
+	font-size:16px;
+	color:green;
+	}
+.esp {
+	width:200px;
+	height:20px;
+	color:#fff;
+	background:#f00;
+	}
+#container {
+	width:400px;
+	height:100px;
+	margin:20px 0;
+	border:1px solid #000;
+	background:#ff0;
+	}
+</style>
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+// <![CDATA[
+window.onload = function () {
+var botaoDiv, folhaEstilo, regrasPara, regrasDiv;	
+	botaoDiv = document.getElementById("btn");	
+	folhaEstilo = document.styleSheets[1];
+	regrasDiv = (folhaEstilo.cssRules) ? folhaEstilo.cssRules[2] : folhaEstilo.rules[2];
+	botaoDiv.onclick = function() {
+		regrasDiv.style.background = "black";
+		regrasDiv.style.color = "green";
+		regrasDiv.style.border = "3px solid blue";
+	}
+}
+// ]]>
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 15</h1>
+<h2>DOM CSS <code>cssRules</code></h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type=&quot;text/javascript&quot;&gt;
+window.onload = function () {
+var botaoDiv, folhaEstilo, regrasPara, regrasDiv;	
+	botaoDiv = document.getElementById("btn");	
+	folhaEstilo = document.styleSheets[1];
+	regrasDiv = (folhaEstilo.cssRules) ? folhaEstilo.cssRules[2] : folhaEstilo.rules[2];
+	botaoDiv.onclick = function() {
+		regrasDiv.style.background = "black";
+		regrasDiv.style.color = "green";
+		regrasDiv.style.border = "3px solid blue";
+	}
+}
+&lt;script&gt;
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+...
+&lt;h3>Titulo nível 3 estilizado&lt;/h3>
+&lt;p class="esp">Texto de um parágrafo estilizado&lt;/p>
+&lt;div id="container">DIV estilizada&lt;/div>
+&lt;button type="button" id="btn">Alterar estilização do div&lt;/button>
+...
+</pre>	
+
+<hr />
+<h3>Titulo nível 3 estilizado</h3>
+<p class="esp">Texto de um parágrafo estilizado</p>
+<div id="container">DIV estilizada</div>
+<button type="button" id="btn">Alterar estilização do div</button>
+
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="../cap_14/c14-replacechild.html">&laquo; Capítulo 14</a> | <a href="../cap_16/C16-html-evento.html">Capítulo 16 &raquo;</a></p>
+</div>
+</body>
+</html>

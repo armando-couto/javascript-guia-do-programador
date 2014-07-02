@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>addEventListener 2</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	window.onload = function () {
+		var botao = document.getElementById("btn");
+
+		var clicadoUm = function () {
+			alert("Botão clicado - um");
+		}
+
+		var clicadoDois = function () {
+			alert("Botão clicado - dois");
+		}
+
+		var clicadoTres = function () {
+			alert("Botão clicado - três");
+		}
+
+		botao.addEventListener("click", clicadoUm, false);
+		// botao.removeEventListener("click", clicadoUm, false);
+		botao.addEventListener("click", clicadoDois, false);
+		botao.addEventListener("click", clicadoTres, false);
+	}
+	</script>
+</head>
+<body>
+	<button type="button" id="btn">Clique aqui!</button>
+</body>
+</html>

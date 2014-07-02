@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AddEventCross</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	var EventUtil = {
+		addHandler: function (element, type, handler) {
+			if(element.addEventListener) {
+				element.addEventListener(type, handler, false);
+			} else if (element.attachEvent) {
+				element.attachEvent("on" + type, handler);
+			} else {
+				element["on" + type] = handler;
+			}
+		}
+	}
+
+	window.onload = function () {
+		var botao = document.getElementById("btn");
+		var botaoClicado = function () {
+			alert("Botão clicado");
+		}
+
+		EventUtil.addHandler(botao, "click", botaoClicado);
+	}
+	</script>
+</head>
+<body>
+	<button type="button" id="btn">Clique aqui!</button>
+</body>
+</html>
