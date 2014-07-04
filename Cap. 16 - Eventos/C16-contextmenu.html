@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head> 
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" media="all" />
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<style type="text/css" media="all">
+#demo {
+	width:400px;
+	height:200px;
+	border:2px solid black;
+	margin:0 auto;
+	cursor:default;
+	}
+#cmenu {
+	width:180px;
+	margin:0;
+	padding:5px 0;
+	border:1px solid #ccc;
+	background:#f1f1f1;
+	font-size:12px;
+	position: absolute;
+	top:-10000px;
+	}
+#cmenu li {
+	padding:4px 8px;
+	list-style:none;
+	}
+#cmenu li:hover {
+	cursor:default;
+	background:#069;
+	color:#fff;
+	}
+#cmenu li.sep {
+	border-bottom:1px solid #ccc;
+	}
+</style>
+
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+// <![CDATA[
+var EventUtil = {
+	addHandler: function(element, type, handler) {
+			if(element.addEventListener) {
+				element.addEventListener(type, handler, false);
+			} else if (element.attachEvent) {
+				element.attachEvent("on" + type, handler);
+			} else {
+				element["on" + type] = handler;
+			}
+		},
+	getEvent: function(event) {
+		return event ? event : window.event;
+	},
+	preventDefault: function(event) {
+		if (event.preventDefault) {
+			event.preventDefault;
+		} else {
+			event.returnValue = false;
+		}
+	}
+}
+window.onload = function() {
+	var div = document.getElementById("demo");	
+	var lis = document.getElementsByTagName("li");
+	EventUtil.addHandler(div, "contextmenu", function(event) {
+	event = EventUtil.getEvent(event);
+	EventUtil.preventDefault(event);
+	var cmenu = document.getElementById("cmenu");
+	cmenu.style.left = event.clientX + "px"; 
+	cmenu.style.top = event.clientY + document.documentElement.scrollTop + "px";
+	});
+	lis[0].onclick = function() {
+	div.style.fontSize = "25px";
+	};
+	lis[1].onclick = function() {
+	div.style.fontSize = "";
+	};
+	lis[2].onclick = function() {
+	div.style.background = "black";
+	div.style.color = "white";
+	};
+	lis[3].onclick = function() {
+	div.style.background = "";
+	div.style.color = "";
+	};
+	EventUtil.addHandler(document, "click", function(event) {
+	cmenu.style.top = "-10000px";
+	})
+}
+// ]]>
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 16</h1>
+<h2>Eventos - <code>contextmenu</code></h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type="text/javascript">
+var EventUtil = {
+	addHandler: function() {...},
+	getEvent: function(event) {...},
+	preventDefaut: function(event) {...}
+}
+window.onload = function() {
+	var div = document.getElementById("demo");	
+	var lis = document.getElementsByTagName("li");
+	EventUtil.addHandler(div, "contextmenu", function(event) {
+	event = EventUtil.getEvent(event);
+	EventUtil.preventDefault(event);
+	var cmenu = document.getElementById("cmenu");
+	cmenu.style.left = event.clientX + "px"; 
+	cmenu.style.top = event.clientY + document.documentElement.scrollTop + "px";
+	});
+	lis[0].onclick = function() {
+	div.style.fontSize = "25px";
+	};
+	lis[1].onclick = function() {
+	div.style.fontSize = "";
+	};
+	lis[2].onclick = function() {
+	div.style.background = "black";
+	div.style.color = "white";
+	};
+	lis[3].onclick = function() {
+	div.style.background = "";
+	div.style.color = "";
+	};
+	EventUtil.addHandler(document, "click", function(event) {
+	cmenu.style.top = "-10000px";
+	})
+}
+&lt;/script>
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+...
+&lt;div id="demo">Clique com o botão direito do mouse nesse DIV&lt;/div>
+&lt;ul id="cmenu">
+	&lt;li>Aumentar tamanho da fonte&lt;/li>
+	&lt;li class="sep">Fonte normal&lt;/li>
+	&lt;li>Alto contraste&lt;/li>
+	&lt;li>Contraste normal&lt;/li>
+&lt;/ul>
+...
+</pre>	
+<hr />
+
+<div id="demo">Clique com o botão direito do mouse nesse DIV</div>
+<ul id="cmenu">
+	<li>Aumentar tamanho da fonte</li>
+	<li class="sep">Fonte normal</li>
+	<li>Alto contraste</li>
+	<li>Contraste normal</li>
+</ul>
+
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="C16-charcode.html">&laquo; anterior</a> | <a href="c16-beforeunload.html">próximo &raquo;</a></p>
+</div>
+</body>
+</html>

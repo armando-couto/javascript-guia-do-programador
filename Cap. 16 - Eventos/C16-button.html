@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head> 
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" media="all">
+#demo {
+	width:300px;
+	height:100px;
+	margin-bottom:20px;
+	border:2px solid red;
+	}
+</style>
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+// <![CDATA[
+var EventUtil = {
+	getEvent: function(event) {
+		return event ? event : window.event;
+	},
+	getButton: function(event) {
+		if(document.implementation.hasFeature("MouseEvents", "2.0")) {
+			return event.button;
+		} else {
+		switch(event.button) {
+		case 0:
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+			return 0;
+		case 2:
+		case 6:
+			return 2;
+		case 4:
+			return 1;
+		}
+		}
+	}
+}
+window.onload = function() {	
+	var demo = document.getElementById("demo")
+	demo.onmousedown = function(event) {
+	var event = EventUtil.getEvent(event);
+	alert(EventUtil.getButton(event))
+	}
+}
+// ]]>
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 16</h1>
+<h2>Eventos - Propriedades <code>button</code></h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type="text/javascript">
+var EventUtil = {
+	getEvent: function(event) {
+		return event ? event : window.event;
+	},
+	getButton: function(event) {
+		if(document.implementation.hasFeature("MouseEvents", "2.0")) {
+			return event.button;
+		} else {
+		switch(event.button) {
+		case 0:
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+			return 0;
+		case 2:
+		case 6:
+			return 2;
+		case 4:
+			return 1;
+		}
+		}
+	}
+}
+window.onload = function() {	
+	var demo = document.getElementById("demo")
+	demo.onmousedown = function(event) {
+	var event = EventUtil.getEvent(event);
+	alert(EventUtil.getButton(event))
+	}
+}
+&lt;/script>
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+...
+&lt;div id="demo">Clique com os três botões do mouse dentro desse DIV (um de cada vez)&lt;/div>
+...
+</pre>	
+
+<hr />
+<div id="demo">Clique com os três botões do mouse dentro desse DIV (um de cada vez)</div>
+
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="C16-relatedtarget.html">&laquo; anterior</a> | <a href="c16-keycode.html">próximo &raquo;</a></p>
+</div>
+</body>
+</html>

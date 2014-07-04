@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head> 
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" media="all" />
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+// <![CDATA[
+var EventUtil = {
+	addHandler: function(element, type, handler) {
+			if(element.addEventListener) {
+				element.addEventListener(type, handler, false);
+			} else if (element.attachEvent) {
+				element.attachEvent("on" + type, handler);
+			} else {
+				element["on" + type] = handler;
+			}
+		},
+	getEvent: function(event) {
+		return event ? event : window.event;
+	}
+}
+EventUtil.addHandler(document, "DOMMouseScroll", function(event) {
+	event = EventUtil.getEvent(event);
+	alert(event.detail);
+});
+// ]]>
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 16</h1>
+<h2>Eventos - <code>DOMMouseScroll</code></h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type="text/javascript">
+var EventUtil = {
+	addHandler: function() {...},
+	getEvent: function(event) {...}
+	
+EventUtil.addHandler(document, "DOMMouseScroll", function(event) {
+	event = EventUtil.getEvent(event);
+	alert(event.detail);
+});
+&lt;/script>
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+...
+</pre>	
+<hr />
+<p class="dest">Role o botão do mouse para frente e depois para trás.<br />
+Funciona somente no Firefox</p>
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="C16-mousewheel.html">&laquo; anterior</a> | <a href="c16-delegacaoevento.html">próximo &raquo;</a></p>
+</div>
+</body>
+</html>

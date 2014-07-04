@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Delegação de Evento</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	var EventUtil = {
+		addHandler: function (element, type, handler) {
+			if(element.addEventListener) {
+				element.addEventListener(type, handler, false);
+			} else if (element.attachEvent) {
+				element.attachEvent("on" + type, handler);
+			} else {
+				element["on" + type] = handler;
+			}
+		},
+
+		removeHandler: function (element, type, handler) {
+			if(element.removeEventListner) {
+				element.removeEventListner(type, handler, false);
+			} else if (element.detachEvent) {
+				element.detachEvent("on" + type, handler);
+			} else {
+				element["on" + type] = handler;
+			}
+		},
+
+		getEvent: function (event) {
+			return event ? event : window.event;
+		},
+
+		getTarget: function (event) {
+			return event.target || event.srcElement;
+		}
+	}
+
+	window.onload = function () {
+		var cmenu = document.getElementById("cmenu");
+		var alvo = document.getElementsByTagName("li");
+
+		EventUtil.addHandler(alvo[0], "click", function (event) {
+			event = EventUtil.getEvent(event);
+			cmenu.style.fontSize = "20px";
+		});
+
+		EventUtil.addHandler(alvo[1], "click", function (event) {
+			event = EventUtil.getEvent(event);
+			cmenu.style.cssText = "background: black; color: white;";
+		});
+
+		EventUtil.addHandler(alvo[2], "click", function (event) {
+			event = EventUtil.getEvent(event);
+			cmenu.style.color = "red";
+		});
+
+		EventUtil.addHandler(alvo[3], "click", function (event) {
+			event = EventUtil.getEvent(event);
+			cmenu.style.width = "300px";
+		});
+
+		EventUtil.addHandler(alvo[4], "click", function (event) {
+			event = EventUtil.getEvent(event);
+			cmenu.style.cssText = "background: none; color: none, fontSize: none; width: none;";
+		});		
+	}
+
+	</script>
+</head>
+<body>
+	<ul id="cmenu">
+	<li id="fonte">Aumentar tamanho da fonte</li>
+	<li id="contraste">Aumentar contraste</li>
+	<li id="cor">Mudar a cor</li>
+	<li id="largura">Largura 300px</li>
+	<li id="default">Estilos default</li>
+</ul>
+</body>
+</html>

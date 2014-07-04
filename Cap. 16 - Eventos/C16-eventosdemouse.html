@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head> 
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" media="all">
+.demo {
+	width:100px;
+	height:80px;
+	margin-bottom:20px;
+	border:2px solid red;
+	}
+</style>
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+// <![CDATA[
+var EventUtil = {
+	getEvent: function(event) {
+		return event ? event : window.event;
+	}
+}
+window.onload = function() {	
+	var event = EventUtil.getEvent(event)
+	var paragrafos = document.getElementsByTagName("p");
+	
+	paragrafos[0].onclick = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+	paragrafos[1].onmousedown = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+	paragrafos[2].onmouseup = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+	paragrafos[3].onmouseover = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+	paragrafos[4].onmouseout = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+	paragrafos[5].ondblclick = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+}
+// ]]>
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 16</h1>
+<h2>Eventos - Eventos de mouse</h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type="text/javascript">
+var EventUtil = {
+	getEvent: function(event) {
+		return event ? event : window.event;
+	}
+}
+window.onload = function() {	
+	var event = EventUtil.getEvent(event)
+	var paragrafos = document.getElementsByTagName("p");
+	
+	paragrafos[0].onclick = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+	paragrafos[1].onmousedown = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+	paragrafos[2].onmouseup = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+	paragrafos[3].onmouseover = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+	paragrafos[4].onmouseout = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+	paragrafos[5].ondblclick = function(event) {		
+		alert("Evento: " + EventUtil.getEvent(event).type)
+	};	
+}
+&lt;/script>
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+...
+&lt;p class="demo">Aqui click&lt;/p>
+&lt;p class="demo">Aqui mousedown&lt;/p>
+&lt;p class="demo">Aqui mouseup&lt;/p>
+&lt;p class="demo">Aqui mouseover&lt;/p>
+&lt;p class="demo">Aqui mouseout&lt;/p>
+&lt;p class="demo">Aqui duplo clique&lt;/p>
+...
+</pre>	
+
+<hr />
+<p class="demo">Aqui click</p>
+<p class="demo">Aqui mousedown</p>
+<p class="demo">Aqui mouseup</p>
+<p class="demo">Aqui mouseover</p>
+<p class="demo">Aqui mouseout</p>
+<p class="demo">Aqui duplo clique</p>
+
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="C16-eventtype.html">&laquo; anterior</a> | <a href="c16-clientxy.html">próximo &raquo;</a></p>
+</div>
+</body>
+</html>

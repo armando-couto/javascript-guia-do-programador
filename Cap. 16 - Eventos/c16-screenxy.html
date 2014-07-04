@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>screenXY</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	var EventUtil = {
+		getEvent: function (event) {
+			return event ? event : window.event;
+		}
+	}
+
+	window.onload = function () {
+		var demo = document.getElementById("demo");
+		var caixasTexto = document.getElementsByTagName("input");
+		demo.onmousemove = function (event) {
+			var event = EventUtil.getEvent(event);
+			caixasTexto[0].value = event.screenX + " pixels";
+			caixasTexto[1].value = event.screenY + " pixels";
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="demo">Passe o ponteiro do mouse nessa área</div>
+	<p>Coordenadas do mouse</p>
+	<label>Coordenada screenX: <input type="text" /></label>
+	<label>Coordenada screenY: <input type="text" /></label>
+	input
+</body>
+</html>
