@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head> 
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" media="all">
+label, input {display:block;}
+#ok, label{margin-top:10px;}
+#dica {color:red;}
+</style>
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+// <![CDATA[
+window.onload = function() {
+	var fdemo = document.getElementById("fdemo");
+	var EventUtil = {
+	addHandler: function(element, type, handler) {
+		if(element.addEventListener) {
+			element.addEventListener(type, handler, false);
+		} else if (element.attachEvent) {
+			element.attachEvent("on" + type, handler);
+		} else {
+			element["on" + type] = handler;
+		}
+	}
+}
+var campoNome = document.forms[0].nome;
+var dica = document.getElementById("dica")
+EventUtil.addHandler(campoNome, "focus", function(event) {
+	campoNome.style.background = "#ffc";
+	dica.innerHTML = "Dica para preenchimento do campo";
+});
+EventUtil.addHandler(campoNome, "blur", function(event) {
+	campoNome.style.background = "";
+	dica.innerHTML = "";
+});
+}
+// ]]>
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 17</h1>
+<h2>Formulários - <code>focus</code> e <code>blur</code></h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type="text/javascript">
+window.onload = function() {
+	var fdemo = document.getElementById("fdemo");
+	var EventUtil = {
+	addHandler: function(element, type, handler) {
+			if(element.addEventListener) {
+				element.addEventListener(type, handler, false);
+			} else if (element.attachEvent) {
+				element.attachEvent("on" + type, handler);
+			} else {
+				element["on" + type] = handler;
+			}
+		}
+}
+var campoNome = document.forms[0].nome;
+var dica = document.getElementById("dica")
+EventUtil.addHandler(campoNome, "focus", function(event) {
+	campoNome.style.background = "#ffc";
+	dica.innerHTML = "Dica para preenchimento do campo";
+});
+EventUtil.addHandler(campoNome, "blur", function(event) {
+	campoNome.style.background = "";
+	dica.innerHTML = "";
+});
+}
+&lt;/script>
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+...
+&lt;form  action="http://www.maujor.com"  id="fdemo" method="get">
+&lt;label for="nome">Nome:&lt;span id="dica">&lt;/span>&lt;/label>
+&lt;input type="text" id="nome" name="nome" />
+&lt;/form>
+...
+</pre>	
+<hr />
+<form  action="http://www.maujor.com"  id="fdemo" method="get">
+<label for="nome">Nome:<span id="dica"></span></label>
+<input type="text" id="nome" name="nome" />
+</form>
+
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="C17-disabled.html">&laquo; anterior</a> | <a href="C17-input.html">próximo &raquo;</a></p>
+</div>
+</body>
+</html>

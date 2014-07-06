@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Disabled</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+	 window.onload = function () {
+	 	var fdemo = document.getElementById("fdemo");
+
+	 	var EventUtil = {
+	 		addHandler: function(element, type, handler) {
+	 			if(element.addEventListener) {
+	 				element.addEventListener(type, handler, false);
+	 			} else if(element.attachEvent) {
+	 				element.attachEvent("on" + type, handler);
+	 			} else {
+	 				element["on" + type] = handler;
+	 			}
+	 		},
+
+	 		removeHandler: function(element, type, handler) {
+	 			if(element.removeEventListener){
+	 				element.removeEventListener(type, handler, false);
+	 			} else if(element.detachEvent) {
+	 				element.detachEvent("on" + type, handler);
+	 			} else {
+	 				element["on" + type] = handler;
+	 			}
+	 		},
+
+	 		getEvent: function(event) {
+	 			return event ? event : window.event;
+	 		},
+
+	 		getTarget: function(event) {
+	 			return event.target || event.srcElement
+	 		}
+	 	}
+
+	 	EventUtil.addHandler(fdemo, "submit", function (event){
+	 		event = EventUtil.getEvent(event);
+	 		alvo = EventUtil.getTarget(event);
+	 		botaoEnvio = alvo.elements["ok"];
+	 		botaoEnvio.disabled = true;
+	 	});
+	 }
+	</script>
+</head>
+<body>
+	<form action="http://google.com" id="fdemo" method="get" accept-charset="utf-8">
+		<label for="nome">Nome:</label>
+		<input type="text" id="nome" name="nome"/>
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email"/>
+		<input type="submit" value="OK" id="ok" name="ok"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Input</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+
+	function limpaCampos (formulario) {
+		qdeControles = formulario.elements.length;
+
+		for(i = 0; i < qdeControles; i++){
+			var controle = formulario.elements[i];
+			if(controle.type == "text" && controle.defaultValue) {
+				controle.onfocus = function () {
+					(this.defaultValue) ? this.value ="" : "";
+				}
+			}
+
+			controle.onblur = function () {
+				(this.value == "") ? this.value = this.defaultValue : "";
+			}
+		}
+	}
+
+
+	window.onload = function () {
+		var formulario = document.getElementById("fdemo");
+		limpaCampos(formulario);
+	}
+	</script>
+</head>
+<body>
+	<form action="" action="" id="fdemo">
+		<label for="nome">Nome: </label>
+		<input type="text" size="25" maxlength="35" value="Seu nome" name="nome" id="nome" />
+		<label for="email">E-mail: </label>
+		<input type="text" size="45" maxlength="65" value="Seu e-email" name="email" id="email" />
+		<input type="submit" value="OK" id="ok" name="ok">
+	</form>
+</body>
+</html>

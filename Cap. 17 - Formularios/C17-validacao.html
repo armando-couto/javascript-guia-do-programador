@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head> 
+<title>Livro JavaScript do Maujor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../estilos/main.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" media="all">
+label, input {display:block;}
+#ok, label{margin-top:10px;}
+</style>
+<!-- code highlighter -->
+<link type="text/css" rel="stylesheet" href="../estilos/shCore.css" />
+<link type="text/css" rel="stylesheet" href="../estilos/shThemeDefault.css" />
+<script type="text/javascript" src="../scripts/shCore.js"></script>
+<script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf"; SyntaxHighlighter.all();</script> 
+<!-- fim code highlighter -->
+<script type="text/javascript">
+// <![CDATA[
+function campoObrigatorio(campo) {
+	if(campo.value.length <1 || campo.value.defaultValue) {
+		return false;
+	} else {
+		return true;
+	} 
+}
+function campoEmail(campo) {
+	if(campo.value.indexOf("@") == -1 || campo.value.indexOf(".") == -1) {
+		return false;
+	} else {
+		return true;
+	} 
+}
+function campoNumerico(campo) { 
+	if(/[^\d]/.test(campo.value)) {
+		return false; 
+	} else {
+		return true;
+	} 
+}
+function campoSelecao(campo) {
+	if(!campo.selectedIndex > 0) {
+		return false;
+	} else {
+		return true;
+	} 
+}
+window.onload = function() { 
+function validarFormulario(formulario) {
+	for (var i=0; i<qdeCampos; i++) {
+		var controle = formulario.elements[i];
+			if (controle.className.indexOf("obrigatorio") != -1) {
+				if(!campoObrigatorio(controle)) {
+					alert("Por favor preencha o campo " + controle.name + ".");
+					return false;
+				}
+			}	
+			if (controle.className.indexOf("email") != -1) {
+				if(!campoEmail(controle)) {
+					alert("Por favor forneça um endereço de email válido.");
+					return false;
+				}
+			}	
+	
+			if (controle.className.indexOf("cpf") != -1) { 
+				if(!campoNumerico(controle)) {
+					alert("O campo " + controle.name + " deve conter somente números.");
+					return false;
+				}
+			}	
+			if (controle.name == "cor") {
+				if(!campoSelecao(controle)) {
+					alert("Por favor selecione uma opção de cor.");
+					return false;
+				}
+			}	
+	}
+}
+	var formulario = document.getElementById("fdemo");
+	var qdeCampos = formulario.elements.length;
+		formulario.onsubmit = function() {
+			return validarFormulario(this);
+		}
+}
+// ]]>
+</script>
+</head>
+<body>
+<div id="tudo">
+<h1>Capítulo 17</h1>
+<h2>Formulários - validação</h2>
+<h3>JavaScript</h3>
+<pre class="brush: javascript">
+&lt;script type="text/javascript">
+function campoObrigatorio(campo) {
+	if(campo.value.length <1 || campo.value.defaultValue) {
+		return false;
+	} else {
+		return true;
+	} 
+}
+function campoEmail(campo) {
+	if(campo.value.indexOf("@") == -1 || campo.value.indexOf(".") == -1) {
+		return false;
+	} else {
+		return true;
+	} 
+}
+function campoNumerico(campo) { 
+	if(/[^\d]/.test(campo.value)) {
+		return false; 
+	} else {
+		return true;
+	} 
+}
+function campoSelecao(campo) {
+	if(!campo.selectedIndex > 0) {
+		return false;
+	} else {
+		return true;
+	} 
+}
+window.onload = function() { 
+function validarFormulario(formulario) {
+	for (var i=0; i&lt;qdeCampos; i++) {
+		var controle = formulario.elements[i];
+			if (controle.className.indexOf("obrigatorio") != -1) {
+				if(!campoObrigatorio(controle)) {
+					alert("Por favor preencha o campo " + controle.name + ".");
+					return false;
+				}
+			}	
+			if (controle.className.indexOf("email") != -1) {
+				if(!campoEmail(controle)) {
+					alert("Por favor forneça um endereço de email válido.");
+					return false;
+				}
+			}	
+	
+			if (controle.className.indexOf("cpf") != -1) { 
+				if(!campoNumerico(controle)) {
+					alert("O campo " + controle.name + " deve conter somente números.");
+					return false;
+				}
+			}	
+			if (controle.name == "cor") {
+				if(!campoSelecao(controle)) {
+					alert("Por favor selecione uma opção de cor.");
+					return false;
+				}
+			}	
+	}
+}
+	var formulario = document.getElementById("fdemo");
+	var qdeCampos = formulario.elements.length;
+		formulario.onsubmit = function() {
+			return validarFormulario(this);
+		}
+}
+&lt;/script>
+</pre>
+<h3>HTML</h3>
+<pre class="brush: html">
+...
+&lt;form  action= "http://www.maujor.com"  id="fdemo" method="post">
+	&lt;label for="nome">Nome:&lt;/label>
+		&lt;input type="text" id="nome" name="nome" class="obrigatorio" />
+	&lt;label for="email" >Email:&lt;/label>
+		&lt;input type="text" id="email" name="email" class="obrigatorio email" />
+	&lt;label for="cpf" >CPF:&lt;/label>
+		&lt;input type="text" id="cpf" maxlength="11" name="cpf" class="obrigatorio cpf" />
+
+&lt;h4>Selecione uma cor&lt;/h4>
+&lt;select id="cor" name="cor">
+	&lt;option value="">Selecione&lt;/option>
+	&lt;option value="azul">Azul&lt;/option>
+	&lt;option value="verde">Verde&lt;/option>
+	&lt;option value="amarela">Amarela&lt;/option>
+	&lt;option value="branca">Branca&lt;/option>
+&lt;/select>
+&lt;input type="submit" value="OK" id="ok" name="ok" />
+&lt;/form>
+...
+</pre>	
+<hr />
+<form  action= "http://www.maujor.com"  id="fdemo" method="post">
+	<label for="nome">Nome:</label>
+		<input type="text" id="nome" name="nome" class="obrigatorio" />
+	<label for="email" >Email:</label>
+		<input type="text" id="email" name="email" class="obrigatorio email" />
+	<label for="cpf" >CPF:</label>
+		<input type="text" id="cpf" maxlength="11" name="cpf" class="obrigatorio cpf" />
+
+<h4>Selecione uma cor</h4>
+<select id="cor" name="cor">
+	<option value="">Selecione</option>
+	<option value="azul">Azul</option>
+	<option value="verde">Verde</option>
+	<option value="amarela">Amarela</option>
+	<option value="branca">Branca</option>
+</select>
+<input type="submit" value="OK" id="ok" name="ok" />
+</form>
+
+<p class="nav-arq" id="referencia">Arquivos exemplo: <a href="C17-add.html">&laquo; anterior</a> | <a href="../cap_18/C18-objetoajax.html">Capítulo18 &raquo;</a></p>
+</div>
+</body>
+</html>
